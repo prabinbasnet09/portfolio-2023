@@ -2,26 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes blink {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
   }
+
+.type-writer::after {
+content: "|";
+animation: blink 1s infinite;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Vertical scrollbar */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+::-webkit-scrollbar:horizontal{
+height: 5px;
+}
+
+/* Track for both vertical and horizontal scrollbars */
+::-webkit-scrollbar-track {
+background: #494949;
+}
+
+/* Handle for both vertical and horizontal scrollbars */
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 2px;
+}
+
+/* Handle on hover for both vertical and horizontal scrollbars */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+/* Horizontal scrollbar */
+::-webkit-scrollbar-horizontal {
+height: 2px;
+}
+
+/* Handle for horizontal scrollbar */
+::-webkit-scrollbar-thumb:horizontal {
+background: #888;
+border-radius: 2px;
+}
+
+/* Handle on hover for horizontal scrollbar */
+::-webkit-scrollbar-thumb:hover:horizontal {
+background: #555;
 }
