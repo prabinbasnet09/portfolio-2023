@@ -18,11 +18,11 @@ animation: blink 1s infinite;
 
 /* Vertical scrollbar */
 ::-webkit-scrollbar {
-width: 10px;
+width: 5px;
 }
 
 ::-webkit-scrollbar:horizontal{
-height: 5px;
+height: 3px;
 }
 
 /* Track for both vertical and horizontal scrollbars */
@@ -33,7 +33,7 @@ background: #494949;
 /* Handle for both vertical and horizontal scrollbars */
 ::-webkit-scrollbar-thumb {
 background: #888;
-border-radius: 2px;
+border-radius: 1px;
 }
 
 /* Handle on hover for both vertical and horizontal scrollbars */
@@ -43,7 +43,7 @@ background: #555;
 
 /* Horizontal scrollbar */
 ::-webkit-scrollbar-horizontal {
-height: 2px;
+height: 1px;
 }
 
 /* Handle for horizontal scrollbar */
