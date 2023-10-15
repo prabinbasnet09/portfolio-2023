@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 export default function WelcomePage() {
   return (
     <>
-    {/* background image */}
+      {/* background image */}
       <div
         className="
           flex
@@ -38,11 +38,10 @@ export default function WelcomePage() {
 
         {/* Welcome Page Nav */}
         <div className='absolute w-full text-white top-3'>
-          <div className='flex justify-between bg-red-500'>
+          <div className='flex justify-between '>
             <div className='pl-5 text-md lg:text-2xl font-bold font-mono'>
               Prabin Basnet
             </div>
-            <div className='pr-5 text-md lg:text-2xl font-bold'>=</div>
           </div>
         </div>
 

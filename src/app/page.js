@@ -1,21 +1,24 @@
 import Image from 'next/image';
 import WelcomePage from './_components/WelcomePage';
 import Profile from './_components/Profile';
-import Timeline from './_components/Timeline';
+import Timeline from './_components/WorkExperience';
 import Achievements from './_components/Achievements';
 import Skills from './_components/Skills';
 import Projects from './_components/Projects';
+import WorkExperience from './_components/WorkExperience';
+import Navbar from './_components/Navbar';
 
 export default function Home() {
   return (
     <>
       <div>
         {/* <WelcomePage /> */}
-        {/* <Profile /> */}
-        {/* <Achievements /> */}
-        {/* <Skills /> */}
-        {/* <Projects /> */}
-        {/* <Timeline /> */}
+        <Navbar />
+        <Profile />
+        <WorkExperience />
+        <Skills />
+        <Projects />
+        <Achievements />
       </div>
     </>
   );
