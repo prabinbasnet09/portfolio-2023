@@ -7,6 +7,8 @@ import Skills from './_components/Skills';
 import Projects from './_components/Projects';
 import WorkExperience from './_components/WorkExperience';
 import Navbar from './_components/Navbar';
+import { Contact } from './_components/Contact';
+import { Footer } from './_components/Footer';
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
         <Skills />
         <Projects />
         <Achievements />
+        <Contact />
+        <Footer />
       </div>
     </>
   );

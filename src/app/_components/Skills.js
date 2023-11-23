@@ -1,11 +1,15 @@
+import TypingEffect from './TypingEffect';
+
+const content = 'ls ';
+
 export default function Skills() {
   return (
-    <>
-      <div className='text-center mt-20 font-bold text-4xl 2xl:text-6xl'>
+    <div className='pt-16 pb-20' id='skills'>
+      <div className='text-center font-bold text-4xl 2xl:text-6xl pb-4'>
         Technical Toolbox
       </div>
-      <div className='mt-10 sm:m-20 flex flex-col items-center justify-center font-extralight sm:font-light '>
-        <div className='bg-black m-3 pb-5 sm:w-1/2 2xl:max-w-[800px] flex-grow'>
+      <div className='mt-10 sm:m-20 flex flex-col items-center justify-center font-extralight sm:font-light  '>
+        <div className='bg-black m-3 pb-5 md:w-full 2xl:max-w-[800px] 4xl:max-w-[1200px] flex-grow '>
           <div className='bg-[#161b22]'>
             <div className='flex justify-between w-[8vh] sm:w-[6vh] h-8 items-center ml-5'>
               <div className='bg-green-300 w-[1.5vh] h-[1.5vh] sm:w-[1vh] sm:h-[1vh] rounded-full'></div>
@@ -16,7 +20,7 @@ export default function Skills() {
           <div className='flex space-x-3 p-5'>
             <div className='flex space-x-0'>
               <div className='relative'>
-                <div className='bg-green-500 rounded-sm pl-1 pr-8 relative  '>
+                <div className='bg-green-500 rounded-sm pl-1 pr-8 relative'>
                   C:\Users\pbasnet\Documents\Skills
                 </div>
                 <div
@@ -28,7 +32,9 @@ export default function Skills() {
                   style={{ transform: 'skewX(-30deg)' }}
                 ></div>
               </div>
-              <div className='pl-1 2xl:text-lg'>ls</div>
+              <div className='pl-1 2xl:text-lg'>
+                <TypingEffect content={content} speed={10} />
+              </div>
             </div>
           </div>
 
@@ -72,6 +78,6 @@ export default function Skills() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

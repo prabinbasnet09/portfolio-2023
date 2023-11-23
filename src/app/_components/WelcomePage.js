@@ -2,7 +2,7 @@ import Navbar from './Navbar';
 
 export default function WelcomePage() {
   return (
-    <>
+    <div className='snap-start'>
       {/* background image */}
       <div
         className="
@@ -48,11 +48,12 @@ export default function WelcomePage() {
         <div>
           <div
             className='
+                    font-mono
                     text-white 
                     text-4xl
                     border-4 border-red-500
                     text-center
-                    lg:text-6xl 2xl:text-8xl
+                    lg:text-6xl 4xl:text-8xl
                     font-bold 
                     tracking-[0.06em]
                     p-10
@@ -64,7 +65,7 @@ export default function WelcomePage() {
           >
             Not Your <br /> Average <br /> Software Engineer!
           </div>
-          <div className='text-white font-bold tracking-wider text-center 2xl:text-4xl bg-red-500 md:ml-1 md:mr-1 md:p-2'>
+          <div className='text-white font-mono font-bold tracking-wider text-center 2xl:text-2xl 4xl:text-4xl bg-red-500 md:ml-1 md:mr-1 md:p-2'>
             Get ready to turn your ideas into reality!
           </div>
         </div>
@@ -72,6 +73,6 @@ export default function WelcomePage() {
           O
         </div>
       </div>
-    </>
+    </div>
   );
 }

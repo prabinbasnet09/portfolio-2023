@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Typewriter */
 @keyframes blink {
     from {
       opacity: 0%;
@@ -223,3 +225,28 @@ background: #555;
   }
 }
 
+/* CSS for code editor in Dev Contact */
+/* Define CSS styles for Java syntax highlighting */
+.keyword {
+  color: #e90; /* Set color for Java keywords */
+}
+
+.className {
+  color: #fff; /* Set color for class names */
+}
+
+.variable {
+  color: #e90; /* Set color for variables */
+}
+
+.variableName {
+  color: #c67688;
+}
+
+.comment {
+  color: #999; /* Set color for comments */
+}
+
+.output{
+  color: #b89415;
+}
