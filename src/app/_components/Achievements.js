@@ -8,21 +8,60 @@ import { BiSolidLike } from 'react-icons/bi';
 import { FaComment } from 'react-icons/fa6';
 import { FaShareFromSquare } from 'react-icons/fa6';
 import { BiSolidBadgeCheck } from 'react-icons/bi';
+import { FaRetweet } from 'react-icons/fa6';
 import { fireConfetti } from './confetti';
 
 export default function Achievements({ setObserver }) {
-  const [likes, setLikes] = useState(500);
-  const [comments, setComments] = useState(60);
-  const [shares, setShares] = useState(50);
+  const [likes, setLikes] = useState({});
+  const [retweet, setRetweet] = useState({});
+  const [shares, setShares] = useState({});
 
-  const handleLikes = e => {
+  useEffect(() => {
+    achievements.forEach(achievement => {
+      setLikes(prevLikes => ({
+        ...prevLikes,
+        [achievement.id]: achievement.likes,
+      }));
+      setRetweet(prevRetweet => ({
+        ...prevRetweet,
+
+        [achievement.id]: achievement.retweet,
+      }));
+      setShares(prevShares => ({
+        ...prevShares,
+        [achievement.id]: achievement.shares,
+      }));
+    });
+  }, []);
+
+  const handleLikes = (e, achievementId) => {
     e.preventDefault();
-    setLikes(likes + 1);
+    setLikes(prevLikes => ({
+      ...prevLikes,
+      [achievementId]: prevLikes[achievementId]
+        ? prevLikes[achievementId] + 1
+        : 1,
+    }));
   };
 
-  const handleShares = e => {
+  const handleRetweet = (e, achievementId) => {
     e.preventDefault();
-    setShares(shares + 1);
+    setRetweet(prevRetweet => ({
+      ...prevRetweet,
+      [achievementId]: prevRetweet[achievementId]
+        ? prevRetweet[achievementId] + 1
+        : 1,
+    }));
+  };
+
+  const handleShares = (e, achievementId) => {
+    e.preventDefault();
+    setShares(prevShares => ({
+      ...prevShares,
+      [achievementId]: prevShares[achievementId]
+        ? prevShares[achievementId] + 1
+        : 1,
+    }));
   };
 
   return (
@@ -34,12 +73,12 @@ export default function Achievements({ setObserver }) {
         Achievements and Awards
       </div>
       <div className='flex flex-col items-center justify-center '>
-        <div className='m-5 w-full sm:w-1/2 lg:max-w-[600px] 4xl:max-w-[800px] h-full space-y-20'>
-          {achievements.map((achievement, index) => {
+        <div className='m-5 w-full md:max-w-[600px] 4xl:max-w-[800px] h-full space-y-20'>
+          {achievements.map(achievement => {
             return (
               <div
                 className='text-black flex flex-col p-5 rounded-2xl shadow-lg bg-[#ffffff]'
-                key={index}
+                key={achievement.id}
               >
                 <div className='flex space-x-4 '>
                   <div className='w-14 h-14  overflow-hidden shadow-2xl rounded-full'>
@@ -94,28 +133,31 @@ export default function Achievements({ setObserver }) {
                 <div className='text-black m-0 mt-5 flex justify-evenly space-x-5 bg-white backdrop-blur-md rounded-lg'>
                   <div
                     className='w-full p-3 rounded-lg flex items-center justify-center space-x-2 hover:cursor-pointer hover:bg-[#e8e8e8] transition ease-in-out delay-150 border'
-                    onClick={e => handleLikes(e)}
+                    onClick={e => handleLikes(e, achievement.id)}
                   >
                     <div className=''>
                       <BiSolidLike />
                     </div>
 
-                    <div>{likes}</div>
+                    <div>{likes[achievement.id]}</div>
                   </div>
-                  <div className='w-full p-3 rounded-lg flex items-center justify-center space-x-2 hover:cursor-pointer hover:bg-[#e8e8e8] transition ease-in-out delay-150 border'>
+                  <div
+                    className='w-full p-3 rounded-lg flex items-center justify-center space-x-2 hover:cursor-pointer hover:bg-[#e8e8e8] transition ease-in-out delay-150 border'
+                    onClick={e => handleRetweet(e, achievement.id)}
+                  >
                     <div className=''>
-                      <FaComment />
+                      <FaRetweet />
                     </div>
-                    <div>{comments}</div>
+                    <div>{retweet[achievement.id]}</div>
                   </div>
                   <div
                     className='w-full p-3 rounded-lg flex items-center justify-center space-x-2 hover:cursor-pointer hover:bg-[#e8e8e8] transition delay-150 duration-300 ease-in-out border'
-                    onClick={e => handleShares(e)}
+                    onClick={e => handleShares(e, achievement.id)}
                   >
                     <div className=''>
                       <FaShareFromSquare />
                     </div>
-                    <div>{shares}</div>
+                    <div>{shares[achievement.id]}</div>
                   </div>
                 </div>
               </div>

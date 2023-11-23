@@ -51,44 +51,48 @@ const projects = [
 
 const achievements = [
   {
+    id: 1,
     title: 'IT Web Code Challenge 2023',
     caption:
       'Winning the IT Web Code Challenge 2023 organized by the University of Louisiana Monroe!!',
     image: '/images/developer-prabin.webp',
     hashTag: ['#ITWebCodeChallenge2023', '#ULM', '#React', '#Redux'],
     likes: 500,
-    comments: 60,
-    shares: 50,
+    retweet: 60,
+    shares: 85,
   },
   {
+    id: 2,
     title: 'IT Web Code Challenge 2023',
     caption:
       'Winning the IT Web Code Challenge 2023 organized by the University of Louisiana Monroe!!',
     image: '/images/developer-prabin.webp',
     hashTag: ['#ITWebCodeChallenge2023', '#ULM', '#React', '#Redux'],
-    likes: 500,
-    comments: 60,
-    shares: 50,
+    likes: 600,
+    retweet: 70,
+    shares: 75,
   },
   {
+    id: 3,
     title: 'IT Web Code Challenge 2023',
     caption:
       'Winning the IT Web Code Challenge 2023 organized by the University of Louisiana Monroe!!',
     image: '/images/developer-prabin.webp',
     hashTag: ['#ITWebCodeChallenge2023', '#ULM', '#React', '#Redux'],
-    likes: 500,
-    comments: 60,
-    shares: 50,
+    likes: 700,
+    retweet: 80,
+    shares: 65,
   },
   {
+    id: 4,
     title: 'IT Web Code Challenge 2023',
     caption:
       'Winning the IT Web Code Challenge 2023 organized by the University of Louisiana Monroe!!',
     image: '/images/developer-prabin.webp',
     hashTag: ['#ITWebCodeChallenge2023', '#ULM', '#React', '#Redux'],
-    likes: 500,
-    comments: 60,
-    shares: 50,
+    likes: 800,
+    retweet: 90,
+    shares: 55,
   },
 ];
 

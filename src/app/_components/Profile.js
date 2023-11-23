@@ -52,7 +52,7 @@ export default function Profile() {
 
             <div className='w-full text-white'>
               <div className='w-full h-full p-3 flex flex-col space-y-5 lg:space-y-0  sm:flex-row sm:justify-center sm:items-center sm:space-x-5 rounded-lg shadow-inner'>
-                <div className='m-auto'>
+                <div className='m-auto '>
                   <div className='mx-auto max-w-[480px]'>
                     <Image
                       src={ProfilePicture}
@@ -64,12 +64,12 @@ export default function Profile() {
                   </div>
                 </div>
 
-                <div className='text-xl pl-3 w-full '>
+                <div className='text-xl pl-3 w-full pt-5 md:pt-10 lg:pt-0 '>
                   <p className='font-bold sm:text-2xl pb-3 text-[#f9a8d4] tracking-widest'>
                     ABOUT ME
                   </p>
                   <p className='font-bold sm:text-4xl pb-3 '>
-                    I &apoos; m{' '}
+                    I &apos; m{' '}
                     <span className='text-[#d8b4fe] tracking-widest'>
                       Prabin Basnet
                     </span>
@@ -83,7 +83,7 @@ export default function Profile() {
                     into reality.&quot;
                   </p>
                   <ul></ul>
-                  <div className='md:flex md:flex-wrap md:items-center justify-center h-full 4xl:justify-start 4xl:pt-5'>
+                  <div className='flex flex-wrap md:items-center h-full 4xl:justify-start pt-3 '>
                     <Link
                       href='https://www.linkedin.com/in/prabin-basnet/'
                       target='blank'
@@ -93,13 +93,18 @@ export default function Profile() {
                     </Link>
                     <Link
                       href='https://github.com/prabinbasnet09'
+                      target='blank'
                       className='p-3 mr-5 font-mono font-semibold rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 hover:cursor-pointer '
                     >
                       Github
                     </Link>
-                    <button className='p-3 mt-3 md:mt-0 rounded-lg font-mono font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 '>
+                    <Link
+                      href='https://github.com/prabinbasnet09'
+                      target='blank'
+                      className='p-3 mt-3 md:mt-0 rounded-lg font-mono font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 '
+                    >
                       Resume
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
