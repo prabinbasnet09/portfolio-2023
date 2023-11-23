@@ -4,18 +4,21 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function WorkExperience() {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
+    if (typeof window !== 'undefined') {
       setIsSmallScreen(window.innerWidth <= 600);
-    };
+      const handleResize = () => {
+        setIsSmallScreen(window.innerWidth <= 600);
+      };
 
-    window.addEventListener('resize', handleResize);
+      window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   const leftContainerVariants = {
