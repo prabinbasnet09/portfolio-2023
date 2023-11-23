@@ -69,7 +69,7 @@ export default function Profile() {
                     ABOUT ME
                   </p>
                   <p className='font-bold sm:text-4xl pb-3 '>
-                    I&apoos;m{' '}
+                    I &apoos; m{' '}
                     <span className='text-[#d8b4fe] tracking-widest'>
                       Prabin Basnet
                     </span>
