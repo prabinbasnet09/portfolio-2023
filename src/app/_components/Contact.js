@@ -58,10 +58,9 @@ export function Contact() {
                   <code>
                     <pre className='text-md'>
                       <span className='comment'>
-                        //Please enter your information in the input boxes and
+                        Please enter your information in the input boxes and
                         {'\n'}
-                        //click Run to reach out to me at
-                        prabinbasnet09@gmail.com
+                        click Run to reach out to me at prabinbasnet09@gmail.com
                         {'\n'}
                         {'\n'}
                       </span>
@@ -111,14 +110,16 @@ export function Contact() {
                       <div className='mt-[0.5]'></div>
                       {'\n'} {'\t'} {'\t'}
                       <span className='text-red-500'>System</span>
-                      .out.println("<span className='output'>Thank you</span>" +
-                      firstName + " " + last_name + {'\n'} {'\t'} {'\t'}"
+                      .out.println(&quot;
+                      <span className='output'>Thank you</span>&quot; +
+                      firstName + &quot; &quot; + last_name + {'\n'} {'\t'}{' '}
+                      {'\t'}"
                       <span className='output'>
                         for contacting me. I will get back to you as soon as
                         possible.
                       </span>
-                      {'\n'} {'\t'} {'\t'}"
-                      <span className='output'>Your message:</span> " +
+                      {'\n'} {'\t'} {'\t'}&quot;
+                      <span className='output'>Your message:</span> &quot; +
                       message_1);
                       {'\n'} {'\t'}
                       {'}'}
