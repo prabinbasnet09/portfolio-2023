@@ -75,12 +75,12 @@ export default function Profile() {
                     </span>
                   </p>
                   <p className='pb-3  tracking-widest font-light text-md sm:text-lg 4xl:max-w-[600px]'>
-                    "Coding is my canvas, and technology is my paintbrush. With
-                    3+ years of experience and a passion for staying on the
+                    &quot;Coding is my canvas, and technology is my paintbrush.
+                    With 3+ years of experience and a passion for staying on the
                     cutting edge, I bring artistry and innovation to every
                     project. From front-end finesse to back-end brilliance,
                     I&apos;m your versatile developer ready to turn your vision
-                    into reality."
+                    into reality.&quot;
                   </p>
                   <ul></ul>
                   <div className='md:flex md:flex-wrap md:items-center justify-center h-full 4xl:justify-start 4xl:pt-5'>

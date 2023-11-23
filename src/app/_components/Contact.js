@@ -113,7 +113,7 @@ export function Contact() {
                       .out.println(&quot;
                       <span className='output'>Thank you</span>&quot; +
                       firstName + &quot; &quot; + last_name + {'\n'} {'\t'}{' '}
-                      {'\t'}"
+                      {'\t'}&quot;
                       <span className='output'>
                         for contacting me. I will get back to you as soon as
                         possible.
