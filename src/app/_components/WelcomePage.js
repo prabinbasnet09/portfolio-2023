@@ -2,7 +2,7 @@ import Navbar from './Navbar';
 
 export default function WelcomePage() {
   return (
-    <div className='snap-start'>
+    <div className=''>
       {/* background image */}
       <div
         className="

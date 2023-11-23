@@ -71,11 +71,12 @@ background: #555;
   padding: 10px 50px;
   position: relative;
   width: 50%;
-  animation: movedown 1s linear forwards;
-  opacity: 0;
+  /* opacity: 0;
+  animation: movedown 6s linear forwards; */
+
 }
 
-@keyframes movedown {
+/* @keyframes movedown {
   0%{
     opacity: 1;
     transform: translateY(-30px);
@@ -100,7 +101,7 @@ background: #555;
 }
 .container:nth-child(5){
   animation-delay: 4s;
-}
+} */
 
 .text-box{
   padding: 20px 30px;
@@ -141,17 +142,17 @@ background: #555;
   left: 50%;
   margin-left: -3px;
   z-index: -1;
-  animation: moveline 6s linear forwards;
+  /* animation: moveline 6s linear forwards; */
 }
 
-@keyframes moveline{
+/* @keyframes moveline{
   0%{
     height: 0;
   }
   100%{
     height: 100%;
   }
-}
+} */
 
 .text-box h1{
   font-size: large;

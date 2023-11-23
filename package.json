@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "babel-plugin-macros": "^3.1.0",
     "canvas-confetti": "^1.9.0",
+    "framer-motion": "^10.16.5",
     "intersection-observer": "^0.12.2",
     "next": "latest",
     "react": "latest",
