@@ -76,7 +76,7 @@ export function Contact() {
   return (
     <>
       <div className='pt-20 p-5 ' id='contact'>
-        <div className='text-white font-bold text-4xl 2xl:text-6xl text-center mb-20'>
+        <div className='text-white font-bold text-4xl xl:text-6xl text-center mb-20'>
           Dev Contact
         </div>
         <div className='flex items-center justify-center'>
@@ -94,9 +94,10 @@ export function Contact() {
                   <code>
                     <pre className='text-md'>
                       <span className='comment'>
-                        Please enter your information in the input boxes and
+                        \\ Please enter your information in the input boxes and
                         {'\n'}
-                        click Run to reach out to me at prabinbasnet09@gmail.com
+                        \\ click Run to reach out to me at
+                        prabinbasnet09@gmail.com
                         {'\n'}
                         {'\n'}
                       </span>

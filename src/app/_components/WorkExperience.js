@@ -56,7 +56,7 @@ export default function WorkExperience() {
 
   return (
     <div className='pt-20 text-black' id='experiences'>
-      <div className='text-white text-center font-bold text-4xl 2xl:text-6xl pb-10 '>
+      <div className='text-white text-center font-bold text-4xl xl:text-6xl pb-10 '>
         Career Highlights
       </div>
       <div className='timeline overflow-hidden'>
@@ -88,20 +88,22 @@ export default function WorkExperience() {
             <small>2023-Present</small>
             <ul className='list-disc ml-5 tracking-wide space-y-5'>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Streamlined data extraction and transformation with Azure Data
+                Factory, optimizing data flow from Excel to Azure SQL Server.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Leveraged Power BI and custom DAX measures to extract actionable
+                insights from diverse data sources, enhancing decision-making
+                capabilities.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Seamlessly integrated Power BI reports into web apps, providing
+                a user-friendly data analysis platform.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Met tight deadlines leading a team of developers and Solution
+                Architects, delivering a comprehensive solution within a
+                demanding three-sprint timeline.
               </li>
             </ul>
             <span className='left-container-arrow'></span>
@@ -135,20 +137,24 @@ export default function WorkExperience() {
             <small>2021-2023</small>
             <ul className='list-disc ml-5 tracking-wide space-y-5'>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Developed responsive web apps using React, Angular, Next.js
+                (front-end), and Spring Boot, Node.js, Django (back-end),
+                showcasing full-stack proficiency.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Led a team of four to design and build a React Native and
+                AWS-powered cross-platform social media app for a startup.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Conducted rigorous unit and integration testing for React
+                components with Jest and Enzyme, along with API testing using
+                Postman, ensuring the reliability of both front-end and
+                back-end.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Proficiently managed SQL/NoSQL databases, ensuring data
+                integrity and reliable storage and retrieval through Mocha
+                testing.
               </li>
             </ul>
             <span className='right-container-arrow'></span>
@@ -182,16 +188,22 @@ export default function WorkExperience() {
             <small>2020-2023</small>
             <ul className='list-disc ml-5 tracking-wide space-y-5'>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Led and guided the ACM Student Chapter, setting the strategic
+                direction and vision for the organization.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Achieved a significant increase in student memberships,
+                fostering a vibrant and inclusive tech community on campus.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Organized and executed various tech-related events, seminars,
+                and workshops to promote knowledge sharing and skill development
+                among members.
+              </li>
+              <li>
+                Spearheaded the creation and maintenance of a dynamic and
+                engaging chapter website, ensuring effective communication and a
+                strong online presence.
               </li>
             </ul>
             <span className='left-container-arrow'></span>
@@ -225,20 +237,25 @@ export default function WorkExperience() {
             <small>2022-2022</small>
             <ul className='list-disc ml-5 tracking-wide space-y-5'>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Enhanced talent acquisition by 80% through collaborative
+                development of a cloud-based web app with 50+ interns,
+                leveraging microservices and AWS technologies like Lambda, API
+                Gateway, and DynamoDB.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Increased user engagement by 40% by creating interactive
+                dashboards with React to predict user interactions with the web
+                app.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Implemented CloudWatch Logs Insights queries and custom
+                dashboards for real-time visibility into application
+                performance, streamlining issue troubleshooting.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Orchestrated data pipelines for seamless import of application
+                logs and user data into Power BI, enabling efficient data
+                analysis and visualization with complex DAX queries.
               </li>
             </ul>
             <span className='right-container-arrow'></span>
@@ -272,16 +289,23 @@ export default function WorkExperience() {
             <small>2020-2022</small>
             <ul className='list-disc ml-5 tracking-wide space-y-5'>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Provided timely and effective technical support to university
+                staff and students, resolving a wide range of IT-related issues,
+                including hardware and software troubleshooting, network
+                connectivity, and account management.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Demonstrated strong customer service skills by offering clear
+                and patient assistance, ensuring end-users' understanding of
+                technical solutions, and maintaining a high level of
+                satisfaction among university community members.
               </li>
               <li>
-                Developed and maintained a web application for a client using
-                React, Redux, and Material UI.
+                Contributed to the improvement of IT support processes by
+                suggesting and implementing solutions to common issues,
+                streamlining ticketing systems, and enhancing user guides,
+                resulting in increased efficiency and reduced response times for
+                resolving IT problems.
               </li>
             </ul>
             <span className='left-container-arrow'></span>

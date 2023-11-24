@@ -23,7 +23,7 @@ const achievementVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      delay: 0.25,
+      delay: 0.5,
     },
   },
 };
@@ -86,7 +86,7 @@ export default function Achievements({ setObserver }) {
       className='pt-20 p-5 bg-gradient-to-b from-[#261f3a] via-purple-800 to-[#261f3a]'
       id='achievements'
     >
-      <div className='text-white font-bold text-4xl 2xl:text-6xl text-center mb-20'>
+      <div className='text-white font-bold text-4xl xl:text-6xl text-center mb-20'>
         Achievements and Awards
       </div>
       <div className='flex flex-col items-center justify-center '>
@@ -144,11 +144,11 @@ export default function Achievements({ setObserver }) {
                     );
                   })}
                 </div>
-                <div className='relative mt-5 w-auto h-[500px] 4xl:h-[800px]'>
+                <div className='relative mt-5 w-auto h-[400px] 4xl:h-[800px]'>
                   <Image
                     src={achievement.image}
                     alt='profile picture'
-                    className='object-cover'
+                    className=' object-contain'
                     fill
                     unoptimized={true}
                   />

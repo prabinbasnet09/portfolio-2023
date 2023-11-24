@@ -1,6 +1,6 @@
 'use client';
 import { once } from 'events';
-import TypingEffect from './TypingEffect';
+import TypingEffect from '../utils/TypingEffect';
 import { motion } from 'framer-motion';
 
 const content = 'ls ';
@@ -8,7 +8,7 @@ const content = 'ls ';
 export default function Skills() {
   return (
     <div className='pt-16 pb-20' id='skills'>
-      <div className='text-center font-bold text-4xl 2xl:text-6xl pb-4'>
+      <div className='text-center font-bold text-4xl xl:text-6xl pb-4'>
         Technical Toolbox
       </div>
       <div className='mt-10 sm:m-20 flex flex-col items-center justify-center font-extralight sm:font-light  '>

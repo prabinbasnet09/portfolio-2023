@@ -1,4 +1,6 @@
 import { CiCircleChevDown } from 'react-icons/ci';
+import { AnimatedText } from '../utils/AnimatedText';
+import { TextFadeIn } from '../utils/TextFadeIn';
 
 export default function WelcomePage() {
   return (
@@ -15,12 +17,11 @@ export default function WelcomePage() {
           relative
           overflow-hidden
           z-10
-          bg-[url("../../public/images/home-bg.jpg")]
-          
+          bg-[url("../../public/images/home-bg.jpg")] 
+         bg-[#161616]
           bg-cover
           bg-no-repeat
           bg-center
-
         '
       >
         {/* overlay */}
@@ -32,10 +33,9 @@ export default function WelcomePage() {
             w-full
             h-full
             bg-gradient-to-r from-white-50 to-white-10
-            backdrop-blur-2xl /* Increase the blur value to 'md' */
+            backdrop-blur-3xl /* Increase the blur value to 'md' */
             opacity-50
             z-[-5]
-
             overflow-hidden
           "
         ></div>
@@ -48,33 +48,30 @@ export default function WelcomePage() {
             </div>
           </div>
         </div>
-
         <div>
-          <div
-            className='
-                    font-mono
-                    text-white 
-                    text-4xl
-                    border-4 
-                    text-center
-                    lg:text-6xl 4xl:text-8xl
-                    font-bold 
-                    tracking-[0.06em]
-                    p-10
-                    m-10 
-                    lg:p-20 
-                    relative 
-                    z-10
-                  '
-          >
-            Not Your <br /> Average <br /> Software Engineer!
-          </div>
-
-          <div className='text-white font-sans font-bold tracking-wider text-center 2xl:text-2xl 4xl:text-4xl  md:ml-1 md:mr-1 md:p-2'>
-            Get ready to turn your ideas into reality!
-          </div>
+          <AnimatedText
+            text={['Not Your', 'Average', 'Software Engineer!']}
+            className=' font-mono
+              text-white 
+              text-4xl
+              border-4 
+              text-center
+              lg:text-6xl 4xl:text-8xl
+              font-bold 
+              tracking-[0.06em]
+           p-5
+              m-10 
+              lg:p-20 
+              relative 
+              z-10'
+          />
+          <TextFadeIn>
+            <div className='text-white font-sans font-bold tracking-wider text-center text-[20px] 2xl:text-2xl 4xl:text-4xl pb-10 md:ml-1 md:mr-1 md:p-2'>
+              Get ready to turn your ideas into reality!
+            </div>
+          </TextFadeIn>
         </div>
-        <div className='text-white absolute bottom-3 text-4xl animate-bounce'>
+        <div className='text-white absolute bottom-10  sm:bottom-3 text-4xl animate-bounce'>
           <CiCircleChevDown />
         </div>
       </div>

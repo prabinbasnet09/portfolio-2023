@@ -24,7 +24,7 @@ const projectVariants = index => ({
 export default function Projects() {
   return (
     <div className='pt-10 pb-28 p-5 text-black bg-[#f3efef]' id='projects'>
-      <div className='pb-10 text-center mt-16 mb-16 font-bold text-4xl 2xl:text-6xl'>
+      <div className='pb-10 text-center mt-16 mb-16 font-bold text-4xl xl:text-6xl'>
         <div>Project Gallery</div>
       </div>
       <div className='mx-auto max-w-[1800px] grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center'>
@@ -38,13 +38,13 @@ export default function Projects() {
               className='flex flex-col h-auto p-3 rounded-lg border shadow-2xl cursor-pointer bg-[#fff]'
               key={index}
             >
-              <div className=''>
+              <div className='max-h-[300px] max-w-[600px] overflow-hidden'>
                 <Image
                   src={project.image}
                   alt='Project picture'
                   width={600}
                   height={300}
-                  className='rounded-lg shadow-lg'
+                  className='rounded-lg shadow-lg object-fit'
                   unoptimized={true}
                 />
               </div>
@@ -53,7 +53,7 @@ export default function Projects() {
               </div>
               <div className='pl-5 pr-3 font-mono'>{project.description}</div>
               <Link
-                className='flex flex-wrap items-center justify-start p-5 font-thin hover:underline'
+                className='flex flex-wrap items-center justify-start p-5 font-thin hover:underline '
                 href={project.github}
                 target='blank'
               >
