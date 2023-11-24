@@ -147,7 +147,7 @@ export default function Achievements({ setObserver }) {
                 <div className='relative mt-5 w-auto h-[400px] 4xl:h-[800px]'>
                   <Image
                     src={achievement.image}
-                    alt='profile picture'
+                    alt={achievement.title}
                     className=' object-contain'
                     fill
                     unoptimized={true}

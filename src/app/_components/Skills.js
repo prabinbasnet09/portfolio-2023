@@ -68,15 +68,20 @@ export default function Skills() {
                 <div>Last updated</div>
                 <div>-------------</div>
                 <ul>
-                  <li>10/10/2023</li>
-                  <li>10/10/2023</li>
-                  <li>10/10/2023</li>
-                  <li>10/10/2023</li>
-                  <li>10/10/2023</li>
-                  <li>10/10/2023</li>
-                  <li>10/10/2023</li>
-                  <li>10/10/2023</li>
-                  <li>10/10/2023</li>
+                  <li>5/10/2023</li>
+                  <li>6/11/2023</li>
+                  <li>7/12/2023</li>
+                  <li>8/13/2023</li>
+                  <li>9/14/2023</li>
+                  <li>10/15/2023</li>
+                  <li>11/16/2023</li>
+                  <li>1/17/2023</li>
+                  <li>12/18/2023</li>
+                  <li>2/18/2023</li>
+                  <li>3/18/2023</li>
+                  <li>11/24/2023</li>
+                  <li>11/24/2023</li>
+                  <li>11/24/2023</li>
                 </ul>
               </div>
               <div>
@@ -92,6 +97,11 @@ export default function Skills() {
                   <li>.NET</li>
                   <li>Tailwind CSS</li>
                   <li>SASS</li>
+                  <li>AWS</li>
+                  <li>Azure</li>
+                  <li>JavaScript</li>
+                  <li>ASP.NET Core</li>
+                  <li>C#</li>
                 </ul>
               </div>
             </div>
