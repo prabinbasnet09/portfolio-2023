@@ -92,7 +92,7 @@ const achievements = [
     title: 'Solutions Architect',
     caption:
       'Certified AWS Solutions Architect! 🎉 Taking steps towards crafting robust AWS solutions. 🚀 ',
-    image: '/images/aws_cert.png',
+    image: '/images/aws_Cert.png',
     hashTag: ['#SolutionsArchitect', '#AWS', '#CloudComputing', '#Programming'],
     likes: 800,
     retweet: 90,

@@ -13,7 +13,7 @@ export default function WelcomePage() {
           justify-center
           items-center
           w-full
-          h-screen
+          h-[100vh]
           relative
           overflow-hidden
           z-10
@@ -71,7 +71,7 @@ export default function WelcomePage() {
             </div>
           </TextFadeIn>
         </div>
-        <div className='text-white absolute bottom-10  sm:bottom-3 text-4xl animate-bounce'>
+        <div className='text-white absolute bottom-3 sm:bottom-3 text-4xl animate-bounce'>
           <CiCircleChevDown />
         </div>
       </div>
