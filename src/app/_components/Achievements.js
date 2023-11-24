@@ -9,7 +9,24 @@ import { FaComment } from 'react-icons/fa6';
 import { FaShareFromSquare } from 'react-icons/fa6';
 import { BiSolidBadgeCheck } from 'react-icons/bi';
 import { FaRetweet } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
+
 import { fireConfetti } from './confetti';
+
+const achievementVariants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: 0.25,
+    },
+  },
+};
 
 export default function Achievements({ setObserver }) {
   const [likes, setLikes] = useState({});
@@ -76,7 +93,13 @@ export default function Achievements({ setObserver }) {
         <div className='m-5 w-full md:max-w-[600px] 4xl:max-w-[800px] h-full space-y-20'>
           {achievements.map(achievement => {
             return (
-              <div
+              <motion.div
+                variants={achievementVariants}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{
+                  once: true,
+                }}
                 className='text-black flex flex-col p-5 rounded-2xl shadow-lg bg-[#ffffff]'
                 key={achievement.id}
               >
@@ -132,35 +155,53 @@ export default function Achievements({ setObserver }) {
                 </div>
                 <div className='text-black m-0 mt-5 flex justify-evenly space-x-5 bg-white backdrop-blur-md rounded-lg'>
                   <div
-                    className='w-full p-3 rounded-lg flex items-center justify-center space-x-2 hover:cursor-pointer hover:bg-[#e8e8e8] transition ease-in-out delay-150 border'
+                    className='w-full p-3 rounded-lg flex items-center justify-center space-x-3 hover:cursor-pointer hover:bg-[#fdfdfd]  border'
                     onClick={e => handleLikes(e, achievement.id)}
                   >
-                    <div className=''>
+                    <motion.button
+                      whileTap={{ scale: 2.9 }}
+                      whileHover={{ scale: 2.1 }}
+                      className=''
+                    >
                       <BiSolidLike />
-                    </div>
+                    </motion.button>
 
-                    <div>{likes[achievement.id]}</div>
+                    <div className='font-thin font-mono'>
+                      {likes[achievement.id]}
+                    </div>
                   </div>
                   <div
-                    className='w-full p-3 rounded-lg flex items-center justify-center space-x-2 hover:cursor-pointer hover:bg-[#e8e8e8] transition ease-in-out delay-150 border'
+                    className='w-full p-3 rounded-lg flex items-center justify-center space-x-3 hover:cursor-pointer hover:bg-[#fdfdfd] transition ease-in-out delay-150 border'
                     onClick={e => handleRetweet(e, achievement.id)}
                   >
-                    <div className=''>
+                    <motion.button
+                      whileTap={{ scale: 2.9 }}
+                      whileHover={{ scale: 2.1 }}
+                      className=''
+                    >
                       <FaRetweet />
+                    </motion.button>
+                    <div className='font-thin font-mono'>
+                      {retweet[achievement.id]}
                     </div>
-                    <div>{retweet[achievement.id]}</div>
                   </div>
                   <div
-                    className='w-full p-3 rounded-lg flex items-center justify-center space-x-2 hover:cursor-pointer hover:bg-[#e8e8e8] transition delay-150 duration-300 ease-in-out border'
+                    className='w-full p-3 rounded-lg flex items-center justify-center space-x-3 hover:cursor-pointer hover:bg-[#fdfdfd] transition delay-150 duration-300 ease-in-out border'
                     onClick={e => handleShares(e, achievement.id)}
                   >
-                    <div className=''>
+                    <motion.button
+                      whileTap={{ scale: 2.9 }}
+                      whileHover={{ scale: 2.1 }}
+                      className=''
+                    >
                       <FaShareFromSquare />
+                    </motion.button>
+                    <div className='font-thin font-mono'>
+                      {shares[achievement.id]}
                     </div>
-                    <div>{shares[achievement.id]}</div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

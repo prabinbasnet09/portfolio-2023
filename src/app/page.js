@@ -13,17 +13,15 @@ import { Footer } from './_components/Footer';
 export default function Home() {
   return (
     <>
-      <div>
-        {/* <WelcomePage /> */}
-        <Navbar />
-        <Profile />
-        <WorkExperience />
-        <Skills />
-        <Projects />
-        <Achievements />
-        <Contact />
-        <Footer />
-      </div>
+      <Navbar />
+      <WelcomePage />
+      <Profile />
+      <WorkExperience />
+      <Skills />
+      <Projects />
+      <Achievements />
+      <Contact />
+      <Footer />
     </>
   );
 }

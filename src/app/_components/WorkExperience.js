@@ -19,7 +19,7 @@ export default function WorkExperience() {
         window.removeEventListener('resize', handleResize);
       };
     }
-  }, []);
+  });
 
   const leftContainerVariants = {
     hidden: {
@@ -45,21 +45,21 @@ export default function WorkExperience() {
 
   const smallScreenVariants = {
     hidden: {
-      opacity: 0,
-      x: 50,
+      opacity: 1,
+      x: 0,
     },
     visible: {
       opacity: 1,
-      x: -10,
+      x: 0,
     },
   };
-  console.log(isSmallScreen);
+
   return (
     <div className='pt-20 text-black' id='experiences'>
       <div className='text-white text-center font-bold text-4xl 2xl:text-6xl pb-10 '>
         Career Highlights
       </div>
-      <div className='timeline'>
+      <div className='timeline overflow-hidden'>
         <div className='container left-container'>
           <div className='company-logo w-10 h-10 rounded-full overflow-hidden bg-white'>
             <Image

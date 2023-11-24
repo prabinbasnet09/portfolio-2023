@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Typewriter */
 @keyframes blink {
     from {
@@ -125,7 +124,7 @@ background: #555;
   border-radius: 50%;
   right: -20px;
   top: 32px;
-  z-index: 10;
+  z-index: 5;
 }
 
 .right-container .company-logo{

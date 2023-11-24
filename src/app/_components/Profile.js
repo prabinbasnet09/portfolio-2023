@@ -28,8 +28,8 @@ const content = `<div className='w-full  text-white '>
 export default function Profile() {
   return (
     <>
-      {/* bg-[#26233a] */}
-      <div className='pt-20 w-auto' id='home'>
+      {/* bg-[#26233a]  p-20*/}
+      <div className='pt-40 w-auto' id='home'>
         <div className='p-4 text-center text-4xl 2xl:text-6xl font-bold bg-gradient-to-r from-indigo-500 via-purple-300 to-pink-500 bg-clip-text text-transparent'>
           Your Next Software Engineer
         </div>
@@ -44,7 +44,7 @@ export default function Profile() {
                     <div className='bg-red-500 w-[1.5vh] h-[1.5vh] sm:w-[1vh] sm:h-[1vh] rounded-full'></div>
                   </div>
                 </div>
-                <div className='p-2 overflow-auto flex-grow min-h-[200px] sm:min-h-[450px] text-sm text-white font-mono'>
+                <div className='p-2 overflow-auto flex-grow min-h-[450px] text-sm text-white font-mono'>
                   <TypingEffect content={content} speed={100} />
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Profile() {
                       Github
                     </Link>
                     <Link
-                      href='https://github.com/prabinbasnet09'
+                      href='https://drive.google.com/file/d/1jc-f5yyecwh3ZY9keH661d_umqYV1t1P/view?usp=sharing'
                       target='blank'
                       className='p-3 mt-3 md:mt-0 rounded-lg font-mono font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 '
                     >

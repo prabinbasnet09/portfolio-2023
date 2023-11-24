@@ -1,4 +1,7 @@
+'use client';
+import { once } from 'events';
 import TypingEffect from './TypingEffect';
+import { motion } from 'framer-motion';
 
 const content = 'ls ';
 
@@ -9,7 +12,7 @@ export default function Skills() {
         Technical Toolbox
       </div>
       <div className='mt-10 sm:m-20 flex flex-col items-center justify-center font-extralight sm:font-light  '>
-        <div className='bg-black m-3 pb-5 md:w-full 2xl:max-w-[800px] 4xl:max-w-[1200px] flex-grow '>
+        <div className='bg-black m-3 pb-5 min-w-[340px] md:w-full 2xl:max-w-[800px] 4xl:max-w-[1200px] flex-grow '>
           <div className='bg-[#161b22]'>
             <div className='flex justify-between w-[8vh] sm:w-[6vh] h-8 items-center ml-5'>
               <div className='bg-green-300 w-[1.5vh] h-[1.5vh] sm:w-[1vh] sm:h-[1vh] rounded-full'></div>
@@ -38,44 +41,61 @@ export default function Skills() {
             </div>
           </div>
 
-          <div>
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: 10,
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+              },
+            }}
+            initial='hidden'
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+            }}
+            whileInView='visible'
+          >
             <div className='flex justify-center items-center pb-5 text-sm 2xl:text-md'>
               Directory: C:\Users\pbasnet\Documents\Skills
             </div>
-          </div>
 
-          <div className='flex justify-around font-extralight text-sm 2xl:text-md'>
-            <div className='flex flex-col'>
-              <div>Last updated</div>
-              <div>-------------</div>
-              <ul>
-                <li>10/10/2023</li>
-                <li>10/10/2023</li>
-                <li>10/10/2023</li>
-                <li>10/10/2023</li>
-                <li>10/10/2023</li>
-                <li>10/10/2023</li>
-                <li>10/10/2023</li>
-                <li>10/10/2023</li>
-                <li>10/10/2023</li>
-              </ul>
+            <div className='flex justify-around font-extralight text-sm 2xl:text-md'>
+              <div className='flex flex-col'>
+                <div>Last updated</div>
+                <div>-------------</div>
+                <ul>
+                  <li>10/10/2023</li>
+                  <li>10/10/2023</li>
+                  <li>10/10/2023</li>
+                  <li>10/10/2023</li>
+                  <li>10/10/2023</li>
+                  <li>10/10/2023</li>
+                  <li>10/10/2023</li>
+                  <li>10/10/2023</li>
+                  <li>10/10/2023</li>
+                </ul>
+              </div>
+              <div>
+                <div>Length Name</div>
+                <div>---------------</div>
+                <ul>
+                  <li>Next.js</li>
+                  <li>React</li>
+                  <li>Java</li>
+                  <li>Node.js</li>
+                  <li>Python</li>
+                  <li>Spring Boot 3</li>
+                  <li>.NET</li>
+                  <li>Tailwind CSS</li>
+                  <li>SASS</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <div>Length Name</div>
-              <div>---------------</div>
-              <ul>
-                <li>Next.js</li>
-                <li>React</li>
-                <li>Java</li>
-                <li>Node.js</li>
-                <li>Python</li>
-                <li>Spring Boot 3</li>
-                <li>.NET</li>
-                <li>Tailwind CSS</li>
-                <li>SASS</li>
-              </ul>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

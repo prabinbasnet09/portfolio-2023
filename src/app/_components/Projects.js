@@ -3,14 +3,23 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '../data/constants';
-import {
-  faLink,
-  faCircleDot,
-  faStar,
-  faCheckCircle,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import fireConfetti from './confetti';
+import { FaLink } from 'react-icons/fa6';
+import { FaCheckCircle } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+const projectVariants = index => ({
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.25 * index,
+    },
+  },
+});
 
 export default function Projects() {
   return (
@@ -21,7 +30,11 @@ export default function Projects() {
       <div className='mx-auto max-w-[1800px] grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center'>
         {projects.map((project, index) => {
           return (
-            <div
+            <motion.div
+              variants={projectVariants(index)}
+              initial='hidden'
+              whileInView='visible'
+              custom={index}
               className='flex flex-col h-auto p-3 rounded-lg border shadow-2xl cursor-pointer bg-[#fff]'
               key={index}
             >
@@ -40,30 +53,27 @@ export default function Projects() {
               </div>
               <div className='pl-5 pr-3 font-mono'>{project.description}</div>
               <Link
-                className='p-5 font-thin hover:underline'
+                className='flex flex-wrap items-center justify-start p-5 font-thin hover:underline'
                 href={project.github}
                 target='blank'
               >
-                <FontAwesomeIcon
-                  icon={faLink}
-                  className='pr-2'
-                ></FontAwesomeIcon>
+                <FaLink className='pr-2 text-[25px]' />
                 Github Repository
               </Link>
               <div className='pl-5 pb-5  grid grid-cols-2 space-y-1 font-mono '>
                 {project.technologies.map((technology, index) => {
                   return (
-                    <div key={index}>
-                      <FontAwesomeIcon
-                        icon={faCheckCircle}
-                        className='pr-3'
-                      ></FontAwesomeIcon>
+                    <div
+                      key={index}
+                      className='flex flex-wrap items-center justify-start '
+                    >
+                      <FaCheckCircle className='pr-3 text-[25px]' />
                       {technology}
                     </div>
                   );
                 })}
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

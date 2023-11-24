@@ -1,4 +1,6 @@
 'use client';
+import emailjs from 'emailjs-com';
+
 import { useState } from 'react';
 
 export function Contact() {
@@ -13,7 +15,14 @@ export function Contact() {
     setFirstName(event.target.value);
     setSubmitted(false);
   };
+  // Hello Prabin,
 
+  // You got a new message from {{firstName}} {{lastName}}:
+
+  // {{message}}
+
+  // Best wishes,
+  // {{firstName}} {{lastName}}
   const handleLastNameChange = event => {
     event.preventDefault();
     setLastName(event.target.value);
@@ -35,8 +44,35 @@ export function Contact() {
   const handleSubmit = event => {
     event.preventDefault();
     setSubmitted(true);
+
+    submitted &&
+    email.length !== 0 &&
+    firstName.length !== 0 &&
+    lastName !== 0 &&
+    message.length !== 0
+      ? sendEmail()
+      : console.log('Error');
   };
 
+  const sendEmail = async () => {
+    const params = {
+      sender: email,
+      firstName: firstName,
+      lastName: lastName,
+      message: message,
+    };
+
+    await emailjs
+      .send('service_dwl8e5e', 'template_rhxct9d', params, 'nyjZso7dw3rv9ki41')
+      .then(
+        response => {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        err => {
+          console.log('FAILED...', err);
+        }
+      );
+  };
   return (
     <>
       <div className='pt-20 p-5 ' id='contact'>
@@ -136,7 +172,7 @@ export function Contact() {
                   </button>
                 </div>
               </div>
-              <div className='bg-black min-h-[100px] rounded-b-lg'>
+              <div className='bg-black min-h-[100px] rounded-b-lg '>
                 <div className='p-1 text-white font-extralight text-xs shadow shadow-[#363636] '>
                   Console
                 </div>
@@ -147,7 +183,8 @@ export function Contact() {
                 message.length !== 0 ? (
                   <div className='p-2 text-white font-mono '>
                     Thank you {firstName} {lastName} for contacting me. I will
-                    get back to you as soon as possible. Your message: {message}{' '}
+                    get back to you as soon as possible. <br />
+                    Your message: {message}{' '}
                   </div>
                 ) : submitted &&
                   (email.length === 0 ||

@@ -1,11 +1,12 @@
-import Navbar from './Navbar';
+import { CiCircleChevDown } from 'react-icons/ci';
 
 export default function WelcomePage() {
   return (
-    <div className=''>
+    <div className='welcome overflow-hidden '>
       {/* background image */}
+      {/* bg-[url('../../public/images/home-bg.jpg')] */}
       <div
-        className="
+        className='
           flex
           justify-center
           items-center
@@ -14,12 +15,13 @@ export default function WelcomePage() {
           relative
           overflow-hidden
           z-10
-          bg-[url('../../public/images/home-bg.jpg')]
+          bg-[url("../../public/images/home-bg.jpg")]
+          
           bg-cover
           bg-no-repeat
           bg-center
 
-        "
+        '
       >
         {/* overlay */}
         <div
@@ -33,13 +35,15 @@ export default function WelcomePage() {
             backdrop-blur-2xl /* Increase the blur value to 'md' */
             opacity-50
             z-[-5]
+
+            overflow-hidden
           "
         ></div>
 
         {/* Welcome Page Nav */}
-        <div className='absolute w-full text-white top-3'>
+        <div className='absolute w-full text-white top-3 '>
           <div className='flex justify-between '>
-            <div className='pl-5 text-md lg:text-2xl font-bold font-mono'>
+            <div className='pl-5 text-lg 4xl:text-2xl font-bold font-mono'>
               Prabin Basnet
             </div>
           </div>
@@ -51,7 +55,7 @@ export default function WelcomePage() {
                     font-mono
                     text-white 
                     text-4xl
-                    border-4 border-red-500
+                    border-4 
                     text-center
                     lg:text-6xl 4xl:text-8xl
                     font-bold 
@@ -65,12 +69,13 @@ export default function WelcomePage() {
           >
             Not Your <br /> Average <br /> Software Engineer!
           </div>
-          <div className='text-white font-mono font-bold tracking-wider text-center 2xl:text-2xl 4xl:text-4xl bg-red-500 md:ml-1 md:mr-1 md:p-2'>
+
+          <div className='text-white font-sans font-bold tracking-wider text-center 2xl:text-2xl 4xl:text-4xl  md:ml-1 md:mr-1 md:p-2'>
             Get ready to turn your ideas into reality!
           </div>
         </div>
-        <div className='text-white absolute bottom-0 text-4xl animate-bounce'>
-          O
+        <div className='text-white absolute bottom-3 text-4xl animate-bounce'>
+          <CiCircleChevDown />
         </div>
       </div>
     </div>
