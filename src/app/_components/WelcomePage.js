@@ -71,7 +71,7 @@ export default function WelcomePage() {
             </div>
           </TextFadeIn>
         </div>
-        <div className='text-white absolute bottom-3 sm:bottom-3 text-4xl animate-bounce'>
+        <div className='text-white absolute bottom-12 sm:bottom-3 text-4xl animate-bounce'>
           <CiCircleChevDown />
         </div>
       </div>
