@@ -296,8 +296,8 @@ export default function WorkExperience() {
               </li>
               <li>
                 Demonstrated strong customer service skills by offering clear
-                and patient assistance, ensuring end-users' understanding of
-                technical solutions, and maintaining a high level of
+                and patient assistance, ensuring end-users&apos; understanding
+                of technical solutions, and maintaining a high level of
                 satisfaction among university community members.
               </li>
               <li>
