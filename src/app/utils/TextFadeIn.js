@@ -21,6 +21,9 @@ export const TextFadeIn = ({ children }) => {
         duration: 0.5,
       }}
       whileInView='visible'
+      viewport={{
+        once: true,
+      }}
     >
       {children}
     </motion.div>

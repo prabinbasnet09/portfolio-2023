@@ -5,7 +5,7 @@ const projects = [
       'The PMAC Application Management System is a comprehensive web and mobile application designed to streamline the process of applying to medical school and health care professional post-baccalaureate programs. It aims to simplify communication, scheduling, and document management between candidates and the Pre-Medical Advisory Committee (PMAC) at the University of Louisiana at Monroe (ULM).',
     image: '/images/pmac.jpg',
     github: 'https://github.com/prabinbasnet09/pmac-beta',
-    technologies: ['NextJS', 'React', 'Java', 'Node.js'],
+    technologies: ['NextJS', 'AWS Cognito', 'GraphQL', 'DynamoDB'],
   },
   {
     title: 'ULM RSS Feed',
@@ -29,7 +29,7 @@ const projects = [
       'This movie wallet app, developed with React/Next.js, Apollo GraphQL, and Mongoose, includes robust features for movie enthusiasts. Users can store their favorite movies and solve the challenge of remembering them. The app ensures secure access with AWS Cognito authentication, providing users a seamless and personalized movie-tracking experience. ',
     image: '/images/movie_wallet.png',
     github: 'https://github.com/prabinbasnet09/movie-wallet-nextjs',
-    technologies: ['NextJS', 'Apollo GraphQL', 'MongoDB', 'AWS Services'],
+    technologies: ['NextJS', 'GraphQL', 'MongoDB', 'AWS'],
   },
   {
     title: 'Chat App',
@@ -37,7 +37,7 @@ const projects = [
       'This web-based chat application, built using JavaScript and Node.js with Express, offers users an immersive chat experience with the ability to navigate through various chat groups, simulating a real chat app environment. Authentication is seamlessly integrated, leveraging the power of AWS Lambda, Bcryptjs, and DynamoDB to ensure secure access and user privacy.',
     image: '/images/chat_app.png',
     github: 'https://github.com/prabinbasnet09/chat-app',
-    technologies: ['Node.js/Express', 'Web Sockets', 'AWS Services', 'React'],
+    technologies: ['Node.js', 'Web Sockets', 'AWS', 'React'],
   },
   {
     title: 'Notes List',
@@ -45,7 +45,7 @@ const projects = [
       'This web application, designed using Next.js and Django, simulates a real notes application, allowing users to seamlessly create, update, and retrieve notes. With an intuitive user interface and robust features, users can efficiently manage their notes and stay organized. Experience the convenience of a modern note-taking tool that enhances productivity and simplifies your daily tasks.',
     image: '/images/notes_app.png',
     github: 'https://github.com/prabinbasnet09/react-django-notes-app',
-    technologies: ['Next.js', 'Django', 'AWS Services', 'MongoDB'],
+    technologies: ['Next.js', 'Django', 'AWS', 'MongoDB'],
   },
 ];
 

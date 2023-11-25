@@ -7,7 +7,7 @@ import { FaLink } from 'react-icons/fa6';
 import { FaCheckCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-const projectVariants = index => ({
+const projectVariants = {
   hidden: {
     opacity: 0,
     y: 100,
@@ -16,10 +16,11 @@ const projectVariants = index => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.25 * index,
+      duration: 0.5,
+      delay: 0.25,
     },
   },
-});
+};
 
 export default function Projects() {
   return (
@@ -31,20 +32,19 @@ export default function Projects() {
         {projects.map((project, index) => {
           return (
             <motion.div
-              variants={projectVariants(index)}
+              variants={projectVariants}
               initial='hidden'
               whileInView='visible'
-              custom={index}
-              className='flex flex-col h-auto p-3 rounded-lg border shadow-2xl cursor-pointer bg-[#fff]'
+              className='flex flex-col h-[700px] p-3 rounded-lg border shadow-2xl cursor-pointer bg-[#fff]'
               key={index}
             >
-              <div className='max-h-[300px] max-w-[600px] overflow-hidden'>
+              <div className='max-h-[300px] max-w-[600px] overflow-hidden '>
                 <Image
                   src={project.image}
                   alt='Project picture'
                   width={600}
                   height={300}
-                  className='rounded-lg shadow-lg object-fit'
+                  className='rounded-lg shadow-lg object-contain'
                   unoptimized={true}
                 />
               </div>

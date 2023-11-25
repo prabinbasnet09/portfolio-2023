@@ -4,7 +4,7 @@ import { TextFadeIn } from '../utils/TextFadeIn';
 
 export default function WelcomePage() {
   return (
-    <div className='welcome overflow-hidden '>
+    <div className='welcome overflow-hidden h-[100svh]'>
       {/* background image */}
       {/* bg-[url('../../public/images/home-bg.jpg')] */}
       <div
@@ -13,7 +13,7 @@ export default function WelcomePage() {
           justify-center
           items-center
           w-full
-          h-[100vh]
+          h-[100svh]
           relative
           overflow-hidden
           z-10
@@ -59,7 +59,7 @@ export default function WelcomePage() {
               lg:text-6xl 4xl:text-8xl
               font-bold 
               tracking-[0.06em]
-           p-5
+              p-5
               m-10 
               lg:p-20 
               relative 
@@ -71,7 +71,7 @@ export default function WelcomePage() {
             </div>
           </TextFadeIn>
         </div>
-        <div className='text-white absolute bottom-12 sm:bottom-3 text-4xl animate-bounce'>
+        <div className='text-white absolute bottom-3 text-4xl animate-bounce'>
           <CiCircleChevDown />
         </div>
       </div>
