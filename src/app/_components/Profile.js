@@ -56,9 +56,8 @@ export default function Profile() {
                   <Image
                     src={ProfilePicture}
                     alt='profile picture'
-                    sizes='10vw'
                     unoptimized={true}
-                    className='rounded-lg'
+                    className='rounded-lg w-full'
                   />
                 </div>
               </div>
@@ -104,7 +103,7 @@ export default function Profile() {
                     Github
                   </Link>
                   <Link
-                    href='https://drive.google.com/file/d/1jc-f5yyecwh3ZY9keH661d_umqYV1t1P/view?usp=sharing'
+                    href='https://drive.google.com/file/d/1Q1cRrHTbpu0uPyiiC0ck38SXb6tgjA9o/view?usp=sharing'
                     target='blank'
                     className='p-3 md:mt-0 rounded-lg font-mono font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 '
                   >

@@ -1,7 +1,7 @@
 'use client';
-import emailjs from 'emailjs-com';
+import emailjs, { send } from 'emailjs-com';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function Contact() {
   const [firstName, setFirstName] = useState('');
@@ -9,6 +9,16 @@ export function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    submitted &&
+    email.length !== 0 &&
+    firstName.length !== 0 &&
+    lastName !== 0 &&
+    message.length !== 0
+      ? sendEmail()
+      : console.log('Error! Please try again later.');
+  }, [submitted]);
 
   const handleFirstNameChange = event => {
     event.preventDefault();
@@ -44,14 +54,6 @@ export function Contact() {
   const handleSubmit = event => {
     event.preventDefault();
     setSubmitted(true);
-
-    submitted &&
-    email.length !== 0 &&
-    firstName.length !== 0 &&
-    lastName !== 0 &&
-    message.length !== 0
-      ? sendEmail()
-      : console.log('Error');
   };
 
   const sendEmail = async () => {

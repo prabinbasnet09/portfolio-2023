@@ -4,7 +4,7 @@ import { TextFadeIn } from '../utils/TextFadeIn';
 
 export default function WelcomePage() {
   return (
-    <div className='welcome overflow-hidden h-[100svh]'>
+    <div className='welcome overflow-hidden h-[100svh]  '>
       {/* background image */}
       {/* bg-[url('../../public/images/home-bg.jpg')] */}
       <div
